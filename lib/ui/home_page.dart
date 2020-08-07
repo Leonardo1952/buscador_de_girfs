@@ -13,10 +13,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String _seach;
 
+  int _offset = 0;
+
   Future<Map> _getGifs() async {
     http.Response response;
 
-    int _offset = 0;
+
 
     if (_seach == null)
       response = await http.get(
@@ -61,6 +63,7 @@ class _HomePageState extends State<HomePage> {
               onSubmitted: (text) {
                 setState(() {
                   _seach = text;
+                  _offset = 0;
                 });
               },
             ),
