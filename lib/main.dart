@@ -1,3 +1,4 @@
+import 'package:buscador_de_girfs/ui/gif_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:buscador_de_girfs/ui/home_page.dart';
